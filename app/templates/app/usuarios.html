@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+</head>
+<body>
+    <table border="1" id="tabla1"> 
+        <thead>
+                <th>Usuarios</th>
+                
+            </thead>
+            <tbody>
+                {% for p in usuarios %}
+                <tr>
+                    <td id="td1">{{p.username}}</td>
+                    
+                    
+                </tr>
+                {% endfor %}
+                <!-- <tr>
+                    <td id="td4">Partido Colombia Renaciente</td>
+                    <td id="td5">11000 views</td>
+                    <td id="td6">200</td>
+                    
+                </tr>
+                <tr>
+                    <td id="td7">Partido Alianza Social Independiente ASI</td>
+                    <td id="td8">20 views</td>
+                    <td id="td9">100</td>
+                    
+                </tr>
+                <tr>
+                    <td id="td10">Partido Alianza Verde</td>
+                    <td id="td11">23000 views</td>
+                    <td id="td12">90</td>
+                    
+                </tr>
+                <tr>
+                    <td id="td13">Partido Cambio Radical</td>
+                    <td id="td14">30000 views</td>
+                    <td id="td15">80</td>
+                    
+                </tr>
+                <tr>
+                    <td id="td16">Partido Centro Democrático</td>
+                    <td id="td17">3000 views</td>
+                    <td id="td18">70</td>
+                    
+                </tr> -->
+            </tbody>
+        </table>
+    
+</body>
+</html>

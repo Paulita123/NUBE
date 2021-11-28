@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Democrática</title>
+    <link rel="stylesheet" href="{% static 'app/EstilosPaginaAdminV.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="contenedor4">
+        <div class="BarraInicial">
+            <button><i class="fas fa-bars fa-2x"></i></button>  
+        </div>
+        <div class="texto1">
+            <br>
+            <h1>Bienvenido Administrador {{ request.user.first_name }}</h1>
+            <br>
+            <p>¡Mira todas la opciones que tenemos para ti desplegando el menu a la derecha!</p>
+            <br>
+            <h3>Misión</h3>
+            <p>Este sitio web tiene como misión informar a todos los ciudadanos de Colombia sobre como esta la situación politica del pais en materia de corrupción. Esta información sera importante en época de campaña, ya que podro conocer información a detaller de los partidos políticos y de cada uno de sus miembros</p>
+            <br>
+            <h3>Objetivo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nemo sed ad ea animi sequi repellendus officia consequuntur earum, quia ex perferendis doloremque amet minus rerum repellat reprehenderit deleniti accusamus?</p>
+        </div>
+
+        <div class="cuadro4">
+            <br>
+            <br>
+            <a href="{% url 'app:CambiarDatosCuentaP' %}">Cambiar datos de la cuenta</a>
+            <br>
+            <br>
+            <a href="{% url 'app:CrearPartidoPoliticoP_view' %}">Crear partido político</a>
+            <br>
+            <br>
+            <a href="{% url 'app:ConsultarListaPartidosPoliticosAP_view' %}">Consultar lista partido político</a>
+
+            <br>
+            <br>
+            <a href="{% url 'app:ConsultarPartidoPoliticoSAR_view' %}">Consultar partido político</a>
+
+            <br>
+            <br>
+            <a href="{% url 'app:CrearIndividuoASAR_view' %}">Crear individuo</a>
+            <br>
+            <br>
+            <a href="{% url 'app:ConsultarListaIndiAP_view' %}">Consultar Lista de individuo</a>
+            <br>
+            <br>
+            <a href="{% url 'app:ConsultarIndividuo_view' %}">Consultar individuo </a>
+            <br>
+            <br>
+            <a href="{% url 'app:AprobarIndividuoSAR_view' %}">Aprobar individuo </a>
+            <br>
+            <br>
+            <a href="{% url 'app:AfiliarIndividuoASAR_view' %}">Afiliar individuos a partidos</a>
+            <br>
+            <br>
+            <a href="{% url 'app:AprobarAfiliacionSAR_view' %}">Aprobar Afiliaciones</a>
+            <br>
+            <br>
+            <a href="{% url 'app:CrearProcesoASAR_view' %}">Crear proceso</a>
+            <br>
+            <br>
+            <a href="{% url 'app:AprobarProcesoASAR_view' %}">Aprobar proceso</a>
+            <br>
+            <br>
+            <a href="{% url 'app:ConsultarProceso_view' %}">Consultar proceso</a>
+            <br>
+            <br>
+            <a href="{% url 'app:ImplicarAfiliadoASAR_view' %}">Implicar un afiliado a proceso</a>
+            <br>
+            <br>
+            <a href="{% url 'app:HabDesSAR_view' %}">Deshabilitar / Habilitar ciudadano</a>
+            <br>
+            <br>
+            <a href="{% url 'app:cerrar_sesion' %}">Cerrar sesión</a>
+        </div>
+
+        <div class="PiePagina">
+            <img src="{% static 'app/IMAGEN2.png' %}" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+
+    </div>
+
+</body>
+</html>

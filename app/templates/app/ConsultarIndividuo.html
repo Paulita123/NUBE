@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Individuo</title>
+    <link rel="stylesheet" href="{% static 'app/con_indi.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="ConsultarIndiP">
+        <div class="BarraInicio"> 3134080803
+            <i class="fas fa-search" id="logo1"></i>
+            <span id="titulo">Consultar Individuo</span>
+        </div>
+        <div class="Opciones">
+            <i class="fas fa-search" id="logo2"></i>
+            <span id="text1"> ¡ Aquí podrás consultar todos los individuos aprobados!</span>
+            <br><br>
+            <div class="cuadro1">
+                
+                <p id="text2">Selecciona el individuo a consultar</p>
+
+                <form action="{% url 'app:ConsultarIndividuo_post' %}" method="post">
+                    {% csrf_token %}
+                    <div class="cuadro5">
+                        <fieldset>
+                            <label for="individuo" id="label3">Seleccione un proceso</label>
+                            <select name="individuo" id="ejemplo">
+                                {% for i in individuos %}
+                                    <option id="text3" value="{{ i.id }}">
+                                        {{ i.nombres }} {{ i.apellidos }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </fieldset>
+                    </div>
+                    <button type="submit" id="boton">CONSULTAR INDIVIDUO</button>
+                </form>                
+            </div>
+
+            {% if implicados != None %}
+            <div>
+                <p id="p1">Apellidos: {{ i.apellidos }}</p>
+                <p id="p2">Nombres: {{ i.nombres }}</p>
+                <p id="p3">Fecha de Nacimiento: {{ i.fecha_nacimiento }}</p>
+                <p id="p4">Cantidad de Visitas: {{ i.visitas }}</p>
+
+                <table border="1" id="tabla1">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Lista de afiliaciones</th>
+                        </tr>
+                        <tr>
+                            <th>Partido político</th>
+                            <th>Fecha de ingreso</th>
+                            <th>Fecha de salida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for a in afiliaciones %}
+                        {% if a.aprobado %}
+                        <tr>
+                            <td id="td5">{{ a.partido.nombre }}</td>
+                            <td id="td6">{{ a.fecha_ingreso }}</td>
+                            <td id="td7">{{ a.fecha_salida }}</td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            <table border="1" id="tabla1">
+                <thead>
+                    <tr>
+                        <th colspan="11">Lista de procesos </th>
+                    </tr>
+                    <tr>
+                        <th>Fecha de inicio del proceso</th>
+                        <th>Fecha fin del proceso</th>
+                        <th>Título del proceso</th>
+                        <th>Entidad</th>
+                        <th>Monto</th>
+                        <th>Comentarios del proceso</th>
+                        <th>Abierto/cerrado</th>
+                        <th>Acusación</th>
+                        <th>Culpable/inocente</th>
+                        <th>Pena</th>
+                        <th>Comentarios de la implicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for a in implicados %}
+                        {% if a.proceso.aprobado %}
+                        <tr>
+                        
+                            <td id="td8">{{ a.proceso.fecha_inicio }}</td>
+                            <td id="td9">{{ a.proceso.titulo }}</td>
+                            <td id="td10">{{ a.proceso.titulo }}</td>
+                            <td id="td11">{{ a.proceso.entidad }}</td>
+                            <td id="td12">${{ a.proceso.monto }} millones</td>
+                            <td id="td13">{{ a.proceso.comentarios }}</td>
+                            <td id="td14">{% if a.proceso.abierto %} Abierto {% else %} Cerrado {% endif %}</td>
+                            <td id="td15">{{ a.acusacion }}</td>
+                            <td id="td16">{% if a.culpable %} Culpable {% else %} Inocente {% endif %}</td>
+                            <td id="td17">{{ a.pena }}</td>
+                            <td id="td18">{{ a.comentarios }}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+            {% endif %}
+            <br>
+            <a href="{% url 'app:inicio_sesion_view' %}" id="link1">Regresar a página de inicio</a><br>
+            <a href="{% url 'app:pagina_administrador_view' %}" id="link2">Regresar a página de inicio de administrador</a>
+            <a href="{% url 'app:pagina_ciudadano_view' %}" id="link3">Regresar a página de inicio de ciudadano</a>
+        </div>
+        <div class="PiePagina">
+            <img src="Imagenes/IMAGEN2.png" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+    </div>
+
+    
+</body>
+</html>

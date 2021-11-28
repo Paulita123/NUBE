@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar partidos políticos</title>
+    <link rel="stylesheet" href="{% static 'app/estilosCPP.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="ConListaPP">
+        
+        <div class="BarraInicial">
+            <i class="fas fa-search" id="logo1"></i>
+            <span id="titulo">Consultar Partidos Políticos</span>
+            
+        </div>
+        <div class="Opciones">
+            <i class="fas fa-search" id="logo2"></i>
+            <span id="text1"> ¡ Consulta ahora !</span>
+            <div class="cuadro1">
+                <form action="{% url 'app:ConsultarPPSAR_post' %}" method="POST">
+                    {% csrf_token %}
+                    <fieldset>
+                        <p id="text2">Selecciona el nombre del partido político</p>
+                        <select name="partido" id="partido">
+                            {% for p in partidos %}
+                            <option value="{{ p.id }}">{{ p.nombre }}</option>
+                            {% endfor %}
+                        </select>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <br><button type="submit" id="boton">CONSULTAR</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            {% if partido != None %}
+            <br>
+            <br>
+            <br>
+            <h1 id="td9" style=" font-family: 'Kaisei Decol', serif;font-size: 20px; margin-left: 500px;">Nombre partido político: {{ partido.nombre }} </h1>
+            <h1 id="td10" style=" font-family: 'Kaisei Decol', serif; font-size: 20px; margin-left: 500px;">Cantidad de visitas: {{ partido.visitas }} views</h1>
+            <h1 id="td11" style=" font-family: 'Kaisei Decol', serif; font-size: 20px;margin-left: 500px;">Procesos:</h1>
+            <ul>
+                <li id="td12" style=" font-family: 'Kaisei Decol', serif; font-size: 20px;margin-left: 500px;">Cantidad total de procesos: {{ procesos }}</li>
+                <li id="td13" style=" font-family: 'Kaisei Decol', serif; font-size: 20px;margin-left: 500px;">Cantidad total de procesos culpables: {{ procesos_cul }}</li>
+            </ul>
+            
+            
+
+            <table border="1" id="tabla1" >
+                <thead>
+                    <tr>
+                        
+                        <!-- <th>Nombre partido político</th> -->
+                        <!-- <th>Cantidad de visitas</th> -->
+
+
+                        <th colspan="4">Lista de afiliados</th>
+                    </tr>
+                    <tr>
+                        <!-- <th scope="col">Nombre partido político</th>
+                        <th scope="col">Cantidad de visitas</th>  
+                        <th>Cantidad total de procesos</th>
+                        <th>Cantidad total de procesos culpables</th> -->
+                        <th>Apellidos</th>
+                        <th>Nombres</th>
+                        <th>Fecha de ingreso</th>
+                        <th>Fecha de salida</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for a in afiliados %}
+                    {% if a.aprobado %}
+                    <tr>
+                        
+                        <th id="td5">{{ a.individuo.apellidos }}</th>
+                        <th id="td6">{{ a.individuo.nombres }}</th>
+                        <th id="td7">{{ a.fecha_ingreso }}</th>
+                        <th id="td8">{{ a.fecha_salida }}</th>
+                        
+                    </tr>
+                    {% endif %}
+                    {% endfor %}                 
+                </tbody>
+
+            </table>
+            {% endif %}
+            <br>
+            <a href="{% url 'app:inicio_sesion_view' %}" id="link1">Regresar a página de inicio</a>
+            <a href="{% url 'app:pagina_administrador_view' %}" id="link3">Regresar a página de inicio de administrador</a>
+            <a href="{% url 'app:pagina_ciudadano_view' %}" id="link3">Regresar a página de inicio de ciudadano</a>
+        </div>
+        <div class="PiePagina">
+            <img src="{% static 'app/IMAGEN2.png' %}"  alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>

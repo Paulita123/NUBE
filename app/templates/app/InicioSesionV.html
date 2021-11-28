@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Democrática</title>
+    <link rel="stylesheet" href="{% static 'app/EstilosVA.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+        }
+
+        fieldset{
+            border: 0;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="intro">
+            <h1>Cultura Democrática</h1>
+            <p>Esta página permitirá tener una plataforma en linea para que los ciudadanos puedan hacer verificación de los casos Anticorrupción en Colombia</p>
+            <p>¡Disfrutalo!</p>
+        </div>
+
+        <div class="Cuadro1">
+            <div class="datos">
+                <form action="{% url 'app:iniciar_sesion_post' %}" method="post">
+                    {% csrf_token %}
+                    <fieldset>
+                        <label>Usuario</label>
+                        <input type="text" name="username" placeholder="Ingrese su usuario aquí">
+                    </fieldset>
+                    <fieldset>
+                        <label for="">Contraseña</label>
+                        <input type="password" name="password" placeholder="Ingrese su contraseña aquí">
+                    </fieldset>
+                    <fieldset>
+                        <button type="submit">Iniciar sesión</button>
+                    </fieldset>
+                </form>
+                <br>
+                <p>¿Deseas crear una cuenta? </p>
+                <a href="{% url 'app:registrarse_view' %}">Resgistrarse gratis</a>   
+                
+            </div>
+        </div>
+
+        <div class="PiePagina">
+            <img src="{% static 'app/IMAGEN2.png' %}" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+        
+    </div>
+</body>
+</html>

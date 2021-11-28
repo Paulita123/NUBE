@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Democrática</title>
+    <link rel="stylesheet" href="{% static 'app/EstilosCambiarDatosCuentaP.css' %}">
+    <!-- <link rel="stylesheet" href="EstilosV/Estilos4VA.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="contenedor6" style="width: 2500px">
+        <div class="cuadro6" style="border-left-width: 300px;">
+            <br>
+            <h1>APROBACIÓN EXITOSA!!!</h1>
+            <p>¡El individuo ha sido aprobado y ahora se vera en la plataforma!</p>
+
+            <a href="ConsultarListaIndiAP.html">Consultar lista de individuos</a>
+            <a href="{% url 'app:pagina_administrador_view' %}">Regresar a la página de incio de administrador</a> 
+            <a href="{% url 'app:inicio_sesion_view' %}">Cerrar sesión</a> 
+        </div>
+
+        <div class="PiePagina">
+            <img src="{% static 'app/IMAGEN2.png' %}" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+    </div>
+
+</body>
+</html>

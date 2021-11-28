@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Democrática</title>
+    <link rel="stylesheet" href="{% static 'app/EstilosRegistrarseV.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor3">
+        <div class="cuadro3">
+            <div class="encabezado">
+                <h1 class="registro">Registrate en Cultura Democrática</h1>
+                <p>¡Es totalmente gratis!</p>
+                <p>Ingresando tus datos seras parte de Cultura Democrática</p>
+                <a href="{% url 'app:inicio_sesion_view' %}">Regresar a la pagina de incio</a>
+                <br>
+            </div>
+
+            <form action="{% url 'app:registrarse_post' %}" method="POST">
+                {% csrf_token %}
+                <fieldset class="datos1">
+                    <label for="">Nombres</label>
+                    <input type="text" name="nombres">
+                    <label for="">Apellidos</label>
+                    <input type="text" name="apellidos">
+                </fieldset>
+                <!-- <fieldset>
+                    <label for="">Apellidos</label>
+                    <input type="text" name="apellidos">
+                </fieldset> -->
+                <fieldset class="datos2">
+                    <label for="">Username</label>
+                    <input type="text" name="username">
+                    <label for="">Password</label>
+                    <input type="password" name="password">
+                </fieldset>
+                <!-- <fieldset>
+                    <label for="">Password</label>
+                    <input type="password" name="password">
+                </fieldset> -->
+                <fieldset class="datos3">
+                    <label for="">Email</label>
+                    <input type="email" name="email">
+                </fieldset>
+                <fieldset class="boton1">
+                    <button type="submit">Crear cuenta</button>
+                </fieldset>
+            </form>
+
+        </div>
+
+        <div class="PiePagina">
+            <img src="{% static 'app/IMAGEN2.png' %}" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+    </div>
+    
+</body>
+</html>

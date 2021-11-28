@@ -1,0 +1,295 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.Header {
+    background: #4e4343;
+    border: solid 0.2px #111111;
+    padding-top: 21px;
+    padding-bottom: 28px;
+}
+
+#titulo {
+    font-family: "Kaisei Decol", serif;
+    font-size: 1.5rem;
+    color: #fff8dc;
+    padding-left: 5px;
+}
+
+#link1 {
+    font-family: "Kaisei Decol", serif;
+    font-size: 20px;
+    padding-left: 480px;
+    
+}
+
+#link2 {
+    font-family: "Kaisei Decol", serif;
+    font-size: 20px;
+    padding-left: 850px;
+}
+
+#link3 {
+    font-family: "Kaisei Decol", serif;
+    font-size: 20px;
+    padding-left: 825px;
+}
+
+
+.Descripcion {
+    border: solid 0.2px #111111;
+    border-top: 35px;
+    padding-top: 21px;
+    padding-bottom: 40px;
+    background: #c7ba83;
+}
+
+#descripcion1 {
+    font-family: "Kaisei Decol", serif;
+    font-size: 1.5rem;
+    color: #0f0f0f;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+#descripcion2 {
+    font-family: "Kaisei Decol", serif;
+    font-size: 1.5rem;
+    color: #0f0f0f;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+#descripcion3 {
+    font-family: "Kaisei Decol", serif;
+    font-size: 1.5rem;
+    color: #0f0f0f;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+
+#link1:hover{
+    color: red;
+}
+#link2:hover{
+    color: red;
+}
+
+#link3:hover{
+    color: red;
+}
+
+
+.CUADROGENERAL{
+
+    background:#453737;
+    width: 718.94px;
+    height: 750px;
+    margin-left: 300px;
+    margin-top: 70px;
+    border: solid 0.2px #111111;
+
+}
+
+#titulo1{
+
+    font-family: 'Kaisei Decol', serif;
+    color: #fff;
+    font-size: 2.0rem;
+    margin-left: 190px;
+    text-align: center;
+
+}
+
+.cuadro11{
+    background:#979796;
+    width: 578.94px;
+    height: 70px;
+    margin-left: 66px;
+    margin-top: 30px;
+    border: solid 0.2px #111111;
+}
+.cuadro12{
+    background:#979796;
+    width: 578.94px;
+    height: 70px;
+    margin-left: 66px;
+    margin-top: 15px;
+    border: solid 0.2px #111111;
+}
+.cuadro13{
+    background:#979796;
+    width: 578.94px;
+    height: 63px;
+    margin-left: 66px;
+    margin-top: 15px;
+    border: solid 0.2px #111111;
+}
+
+.cuadro14{
+    background:#979796;
+    width: 578.94px;
+    height: 63px;
+    margin-left: 66px;
+    margin-top: 15px;
+    
+}
+.cuadro15{
+    background:#979796;
+    width: 578.94px;
+    height: 70px;
+    margin-left: 66px;
+    margin-top: 15px;
+    border: solid 0.2px #111111;
+}
+.cuadro16{
+    background:#979796;
+    width: 578.94px;
+    height: 63px;
+    margin-left: 66px;
+    margin-top: 15px;
+    border: solid 0.2px #111111;
+}
+.cuadro17{
+    background:#979796;
+    width: 578.94px;
+    height: 63px;
+    margin-left: 66px;
+    margin-top: 15px;
+    border: solid 0.2px #111111;
+}
+
+#r1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 17px;
+    margin-top: 2px;
+    margin-left: 110px;
+}
+#dato1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 0.5px;
+    margin-left: 100px;
+    padding-top: 5px;
+}
+#r2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 17px;
+    margin-top: 2px;
+    margin-left: 200px;
+}
+#dato2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 0.5px;
+    margin-left: 100px;
+    padding-top: 5px;
+}
+
+#r3{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 305x;
+
+}
+#dato3{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 45px;
+}
+
+#r4{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 80px
+
+}
+#dato4{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-left: 45px;
+}
+
+#r5{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 17px;
+    margin-top: 2px;
+    margin-left: 225px;
+}
+#dato5{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 0.5px;
+    margin-left: 140px;
+    padding-top: 5px;
+}
+
+#r6{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 130px
+}
+#dato6{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+#r7{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 45px
+
+}
+#dato7{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+#boton1{
+    background: #4b82c2;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 5px;
+    margin-left: 140px;
+    border: solid 0.2px #111111;
+}
+
+#boton1:hover{
+    background: red;
+}
+
+
+#descripcion4 {
+    font-family: "Kaisei Decol", serif;
+    font-size: 1.5rem;
+    color: #0f0f0f;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+.Footer {
+    border: solid 0.2px #c7ba83;
+    border-top: 35px;
+    padding-top: 21px;
+    padding-bottom: 38.5px;
+    background:#4E4343;
+    
+}
+
+#imagen2 {
+    width: 200px;
+    margin-left: 1135px;
+}

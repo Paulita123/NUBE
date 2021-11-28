@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afiliar individuo a partido-Administrador</title>
+    <link rel="stylesheet" href="{% static 'app/AfiliarIndividuoA.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="AfiliarIndividuoA">
+
+        <div class="Header">
+            <span id="titulo"> Afiliar Individuo A Partido-Administrador </span>
+            <a href="{% url 'app:inicio_sesion_view' %}" id="link1">Regresar a página de inicio</a>
+            <a href="{% url 'app:pagina_administrador_view' %}" id="link2">Regresar a página de inicio de administrador</a>
+            <br>
+
+        </div>
+
+        <div class="OpcionesPAG">
+            <i class="fas fa-search"></i>
+            <span id="Descripción"> Bienvenido Administrador, aqui podras afiliar y aprobar un individuo que desee
+                afiliarse</span>
+        </div>
+
+        <div class="Afiliar">
+            <p id="TituloAfiliar"> AFILIAR
+                <br>INDIVIDUO
+            </p>
+            <div class="boton1">
+                <form method="POST" action="{% url 'app:AfiliarIndividuoASAR_post' %}">
+                    {% csrf_token %}
+                    <p id="TituloBoton1">Seleccione el ID del
+                        <br>Individuo
+                    </p>
+                    <select name="individuo_id" id="ID">
+                        {% for i in individuos %}
+                        <option value="{{ i.id }}">{{ i.apellidos }} {{ i.nombres }}</option>
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <br>
+            </div>
+            <div class="boton2">
+                <p id="TituloBoton2">Seleccione el ID del
+                    <br>Partido Politico
+                </p>
+                <select name="partido_id" id="Partido">
+                    {% for p in partidos %}
+                    <option value="{{ p.id }}">{{ p.nombre }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <br>
+
+            </div>
+            <div class="boton3">
+                <p id="TituloBoton3">Seleccione la fecha de
+                    <br> ingreso
+                </p>
+                <input type="date" id="fecha1" name="fecha-ingreso" required>
+                <br>
+                <br>
+
+            </div>
+            <div class="boton4">
+                <p id="TituloBoton4">Seleccione la fecha de
+                    <br> salida
+                </p>
+                <input type="date" id="fecha2" name="fecha-salida">
+                <br>
+                <br>
+
+            </div>
+            <div class="boton5">
+                <input type="submit" value="Completar Afiliación">
+                <br>
+            </div>
+
+            </form>
+
+        </div>
+        <div class="Footer">
+            <img src="ImagenesP/IMAGEN2.png" alt="IMAGEN REDES SOCIALES" id="imagen2">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear partido político</title>
+    <link rel="stylesheet" href="{% static 'app/EstilosCrearPartidoPoliticoP.css' %}">
+    <!-- <link rel="stylesheet" href="EstilosV/Estilos6VA.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="contenedor8">
+        <div class="cuadro8">
+            <div class="encabezado">
+                <h2>Crear partido político</h2>
+                <p>Escriba en nombre del partido político que desea crear</p>
+            </div>
+            <div class="datos1">
+                <form action="{% url 'app:CrearPartidoPoliticoPOSTP' %}" method="post">
+                {% csrf_token %}
+                <p>Partido Político a crear:</p>
+                <br>
+                <input type="text" id="partido" placeholder="Ingrese el nombre del partido político" name="nombre">
+                <br>
+                <!-- <select name="users" id="">
+                    {% for u in  iniciar_sesion_post %}
+                    {% if u.is_superuser %}
+                    <option value="{{u.id}}">{{u.username}}</option>
+                    {% else %}
+                    
+                    {% endif %}
+                    {% endfor %}
+                </select> -->
+                <br>
+                <button type="submit">Crear partido</button>
+                <!-- <p>Nombre de creador:</p>
+                <br>
+                <input type="text" id="nombre" placeholder="Ingrese el creador aquí"> -->
+                </form>
+            </div>
+            <div class="boton1">
+                <!-- <button type="submit">Crear partido</button> -->
+                <!-- <button><a href="PaginaAdminVA.html">Enviar</a></button> -->
+            </div>
+
+        </div>
+        <div class="PiePagina">
+            <img src="{% static 'app/IMAGEN2.png' %}" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+    </div>
+</body>
+</html>

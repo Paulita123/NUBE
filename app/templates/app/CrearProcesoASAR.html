@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'app/CrearProcesoA.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Crear Proceso</title>
+</head>
+<body>
+    <div class="CrearProcesoA-SAR">
+        <div class="Header">
+            <i class="fas fa-tree"></i>
+            <span id="titulo">CREAR PROCESO - ADMINISTRADOR </span>
+        </div>
+        <div class="Descripcion">
+            <i class="fas fa-tree"></i>
+            <span id="descripcion1"> ¡Bienvenido Administrador! Aqui puedes crear un proceso para luego asociar afiliados a un partido
+                politico.</span>
+            <br>
+            <br>
+            <i class="fas fa-tree"></i>
+            <span id="descripcion2">Tú Proceso será aprobado automaticamente y se verá en la plataforma.</span>
+
+            <div class="CUADROGENERAL">
+                <span id="titulo1"> CREAR PROCESO</span>
+                <form  action="{% url 'app:CrearProcesoASAR_post' %}" method="post">
+                    {% csrf_token %}
+                    <div class="cuadro11">
+                        <fieldset>
+                            <label for="titulo" id="dato1">Ingrese el titulo</label>
+                            <input type="text" id="r1" name="titulo" placeholder="titulo">
+                        </fieldset>
+                    </div>
+                    <div class="cuadro12">
+                        <fieldset>
+                            <label for="fecha-i" id="dato2">Ingrese fecha de inicio</label>
+                            <input type="date" id="r2" name="fecha-i" placeholder="fecha de inicio">
+                        </fieldset>
+                    </div>
+                    <div class="cuadro13">
+                        <fieldset>
+                            <label for="fecha-f" id="dato3">Ingrese fecha de finalizacion</label>
+                            <input type="date" id="r3" name="fecha-f" placeholder="fecha de finalizacion">
+                        </fieldset>
+                    </div>
+                    <div class="cuadro14">
+                        <fieldset>
+                            <label for="fecha-i" id="dato4">Seleccione una opcion</label>
+                            <select name="ab-ce" id="r4">
+                                <option value="1">Proceso Abierto</option>
+                                <option value="0">Proceso Cerrado</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div class="cuadro15">
+                        <fieldset>
+                            <label for="entidad" id="dato5">Ingrese la entidad</label>
+                            <input type="text" id="r5" name="entidad" placeholder="entidad">
+                        </fieldset>
+                    </div>
+                    <div class="cuadro16">
+                        <fieldset>
+                            <label for="monto" id="dato6">Ingrese el monto</label>
+                            <input type="number" id="r6" name="monto" placeholder="monto">
+                        </fieldset>
+                    </div>
+                    <div class="cuadro17">
+                        <fieldset>
+                            <label for="comentarios" id="dato7">Ingrese los comentarios</label>
+                            <input type="text" id="r7" name="comentarios" placeholder="comentarios">
+                        </fieldset>
+                    </div>
+                    <br>
+                    <button type="submit" id="boton1">CREAR PROCESO</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="Footer">
+        <img src="Imagenes/IMAGEN2.png" alt="IMAGEN REDES SOCIALES" id="imagen2">
+    </div>
+</body>
+</html>

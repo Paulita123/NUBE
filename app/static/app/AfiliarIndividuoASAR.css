@@ -1,0 +1,344 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.AfiliarIndividuoA{
+
+    width: 100VW;
+    height: 145vh;
+    background: #c7ba83;
+    display: grid;
+    grid-template: 80px 80px auto 60px 30px / 0.3fr 2fr 0.2fr 1fr 0.3fr;
+
+
+}
+
+.Header{
+
+    background: #5e5555;
+    border: solid 0.2px #111111;
+    padding-top: 21px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 6;
+    padding-bottom: 28px;
+}
+
+#titulo{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 1.5rem;
+    color: #fff8dc;
+    padding-left: 80px;
+}
+
+#link1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 450px;
+    
+}
+
+#link2 {
+    font-family: "Kaisei Decol", serif;
+    font-size: 20px;
+    padding-left: 950px;
+  }
+  #link1:hover{
+    color: red;
+}
+#link2:hover{
+  color: red;
+}
+
+
+.OpcionesPAG{
+    background: #c7ba83;
+   
+    padding-top: 21px;
+    grid-row: 2/ 3;
+    grid-column: 1 / 6;
+    padding-bottom: 28px;
+}
+
+#Descripción{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 1.5rem;
+
+    color: #111111;
+    padding-left: 30px;
+}
+
+.Afiliar{
+    
+    background:#453737;
+    grid-row: 3 / 4;
+    grid-column: 2/ 3;
+   
+}
+
+#TituloAfiliar{
+
+    font-family: 'Kaisei Decol', serif;
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+
+
+}
+
+#TituloBoton1{
+
+    font-family: 'Kaisei Decol', serif;
+    color: #111111;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+#TituloBoton2{
+
+    font-family: 'Kaisei Decol', serif;
+    color: #111111;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+#TituloBoton3{
+
+    font-family: 'Kaisei Decol', serif;
+    color: #111111;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+#TituloBoton4{
+
+    font-family: 'Kaisei Decol', serif;
+    color: #111111;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+.boton1{
+
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    text-align: center;
+    border-top: #453737 solid 20px;
+    border-left:#453737 solid 70px;
+    border-right: #453737 solid 70px;
+    background: #979796;
+
+}
+
+.boton2{
+   
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    text-align: center;
+    border-top: #453737 solid 20px;
+    border-left:#453737 solid 70px;
+    border-right: #453737 solid 70px;
+    background: #979796;
+}
+.boton3{
+
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    text-align: center;
+    border-top: #453737 solid 20px;
+    border-left:#453737 solid 70px;
+    border-right: #453737 solid 70px;
+    background: #979796;
+}
+
+.boton4{
+
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    text-align: center;
+    border-top: #453737 solid 20px;
+    border-left:#453737 solid 70px;
+    border-right: #453737 solid 70px;
+    background: #979796;
+}
+
+.boton5{
+
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    text-align: center;
+    border-top: #453737 solid 20px;
+    border-left:#453737 solid 70px;
+    border-right: #453737 solid 70px;
+    background: #453737;
+}
+
+.Aprobar{
+
+    background:#453737;
+    grid-row: 3/ 4;
+    grid-column: 4/5;
+}
+
+#TituloAprobar{
+
+    font-family: 'Kaisei Decol', serif;
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+
+}
+
+
+.boton11{
+
+   
+    font-family: 'Kaisei Decol', serif;
+    font-size: 25px;
+    text-align: center;
+    border-top: #453737 solid 40px;
+    border-left:#453737 solid 70px;
+    border-right: #453737 solid 70px;
+    background: #979796;
+
+}
+
+.boton21{
+
+    
+    font-family: 'Kaisei Decol', serif;
+    font-size: 25px;
+    text-align: center;
+    border-top: #453737 solid 30px;
+    border-left:#453737 solid 70px;
+    border-right: #453737 solid 70px;
+    background: #979796;
+}
+
+.boton31{
+
+    
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    text-align: center;
+    border-top: #453737 solid 30px;
+    border-left:#453737 solid 70px;
+    border-right: #453737 solid 70px;
+    background: #979796;
+}
+
+#TituloBoton11{
+
+    font-family: 'Kaisei Decol', serif;
+    color: #111111;
+    font-size: 1.0rem;
+    text-align: center;
+
+}
+
+#TituloBoton21{
+
+    font-family: 'Kaisei Decol', serif;
+    color: #111111;
+    font-size: 1.0rem;
+    text-align: center;
+
+}
+
+#TituloBoton31{
+
+    font-family: 'Kaisei Decol', serif;
+    color: #111111;
+    font-size: 1.0rem;
+    text-align: center;
+
+}
+
+
+.boton51{
+
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    text-align: center;
+    border-top: #453737 solid 20px;
+    border-left:#453737 solid 70px;
+    border-right: #453737 solid 70px;
+    background: #453737;
+}
+.Footer{
+    border: solid 0.2px #4e4343;
+    border-top: 35px;
+    padding-top: 50px;
+    padding-bottom: 38.5px;
+    background:#4E4343;
+    grid-row: 5 / 6;
+    grid-column: 1/ 6;
+   
+}
+
+
+#imagen2{
+    width: 200px;
+    margin-left: 1135px;
+}
+
+#ID{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    width: 250px;
+    height: 31px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-top: 15px;
+  }
+
+  #Partido{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    width: 250px;
+    height: 31px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-top: 15px;
+  }
+  #fecha1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    width: 250px;
+    height: 31px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-top: 15px;
+  }
+  #fecha2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 15px;
+    width: 250px;
+    height: 31px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-top: 15px;
+  }
+  
+  
+  #link3{
+      
+    padding-top: 60px;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 50px;
+    
+}
+#link3:hover{
+    color: red;
+  }
+
+  #boton5:hover{
+    background: red;
+  }

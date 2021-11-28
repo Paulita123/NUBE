@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilosp/estilosConListaIndiAP.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'app/estilosCPP.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Consultar lista individuos administrador</title>
+</head>
+<body>
+    <div class="ConListaPP">
+        <div class="BarraInicial">
+            <i class="fas fa-search" id="logo1"></i>
+            <span id="titulo">Consultar lista de individuos</span>
+        </div>
+        <div class="Opciones">
+            <i class="fas fa-search" id="logo2"></i>
+            <span id="text1">¡ Ahora podrás ver toda la lista de individuos aquí !</span>
+            <br>
+            <table border="1" id="tabla1">
+                <thead>
+                    <th>Apellidos</th>
+                    <th>Nombres</th>
+                    <th>Último partido afiliado</th>
+                    <th>Cantidad total de procesos</th>
+                    <th>Aprobado/No aprobado</th>
+                </thead>
+                <tbody>
+                    {% for i in individuos %}
+                    {% if i.0.aprobado %}
+                    <tr>
+                        <td id="td1">{{ i.0.apellidos }}</td>
+                        <td id="td2">{{ i.0.nombres }}</td>
+                        <td id="td3">{{ i.1.partido.nombre }}</td>
+                        <td id="td4">{{ i.2 }}</td>
+                        <td id="td5">
+                            Aprobado
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+            <span>Recuerda que toda la información presentada está totalmente VERIFICADA</span>
+            <br>
+            <!-- <i class="fas fa-user-check fa-10x" id="logo3"></i> -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="{% url 'app:inicio_sesion_view' %}" target="_blank" id="link1">Regresar a página de inicio</a>
+            <a href="{% url 'app:pagina_ciudadano_view' %}" target="_blank" id="link2">Regresar a página de inicio de ciudadano</a>
+        </div>
+        <div class="PiePagina">
+            <img src="ImagenesP/IMAGEN2.png" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,321 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.BarraInicio{
+    background: #4E4343;
+    border: solid 0.2px #111111;
+    padding-top: 21px;
+    padding-bottom: 28px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+}
+#titulo{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 1.5rem;
+    color: #fff8dc;
+    padding-left: 5px;
+}
+
+#logo1{
+    background: #4E4343;
+    color: cornsilk;
+    padding: 0.3px;
+    border-left: 6px solid #4E4343;
+    border-top: 1.5px solid #4E4343;
+    width: 22px;
+    height: 22px;
+}
+
+#logo2{
+    background: #c7ba83;
+    color: #0a0a0a;
+    padding: 0.3px;
+    border-left: 6px solid #c7ba83;
+    border-top: 1.5px solid #c7ba83;
+    width: 22px;
+    height: 22px;
+}
+#text1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 1.5rem;
+    color: #0f0f0f;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+.Opciones{
+    border: solid 0.2px #111111;
+    padding-top: 21px;
+    padding-bottom: 360px;
+    background:#c7ba83;
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+.PiePagina{
+    border: solid 0.2px #c7ba83;
+    border-top: 35px;
+    padding-top: 21px;
+    padding-bottom: 38.5px;
+    background:#4E4343;
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+#imagen2{
+    width: 200px;
+    margin-left: 1135px;
+}
+.cuadro1{
+    background:#453737;
+    grid-row: 2/ 3;
+    grid-column: 1/ 3;
+    width: 718.94px;
+    height: 471.19px;
+    margin-left: 80px;
+    margin-top: 50px;
+   
+}
+#text2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 25px;
+    color:#fff8dc;
+    padding-left: 230px;
+    padding-bottom: 10px;
+}
+
+#text3{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 25px;
+    color:#fff8dc;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    margin-left: 75px;
+}
+
+#text3_C{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 25px;
+    color:#fff8dc;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+}
+.cuadro3{
+    background:#979796;
+    grid-row: 2/ 3;
+    grid-column: 1/ 2;
+    width: 578.94px;
+    height: 63px;
+    margin-left: 70px;
+    margin-top: 100px;
+   
+}
+.cuadro4{
+    background:#979796;
+    grid-row: 2/ 3;
+    grid-column: 1/ 2;
+    width: 578.94px;
+    height: 63px;
+    margin-left: 66px;
+    margin-top: 15px;
+   
+}
+.cuadro5{
+    background:#979796;
+    grid-row: 2/ 3;
+    grid-column: 1/ 2;
+    width: 578.94px;
+    height: 63px;
+    margin-left: 66px;
+    margin-top: 15px;
+   
+}
+.cuadro6{
+    background:#979796;
+    grid-row: 2/ 3;
+    grid-column: 1/ 2;
+    width: 578.94px;
+    height: 63px;
+    margin-left: 66px;
+    margin-top: 15px;
+   
+}
+#boton1{
+    background: #4b82c2;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+    margin-left: 298px;
+}
+#boton1:hover{
+    background: brown;
+}
+.cajita1{
+    background: #979796;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+.cajita1:hover{
+    background: brown;
+}
+
+.cajita2{
+    background: #979796;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+.cajita2:hover{
+    background: brown;
+}
+.cajita3{
+    background: #979796;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+.cajita3:hover{
+    background: brown;
+}
+.cajita4{
+    background: #979796;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+.cajita4:hover{
+    background: brown;
+}
+.cajita5{
+    background: #979796;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+.cajita5:hover{
+    background: brown;
+}
+.cajita6{
+    background: #979796;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+.cajita6:hover{
+    background: brown;
+}
+#respuesta1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 60px;
+
+}
+#label1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+#respuesta2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 40px;
+
+}
+#label2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+#respuesta3{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-left: 300px;
+
+}
+#label3{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-left: 60px;
+}
+#respuesta4{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-left: 300px;
+
+}
+#label4{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-left: 60px;
+}
+#link1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 600px;
+   
+    
+}
+#link1:hover{
+    color: brown;
+}
+#link2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-left: 51px;
+    
+
+}
+#link2:hover{
+    color: brown;
+}
+#link3{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-left: 520px;
+    
+}
+#link3:hover{
+    color: brown;
+}
+
+
+
+
+
+
+
+
+

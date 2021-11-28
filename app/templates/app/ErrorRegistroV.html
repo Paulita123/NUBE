@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Democrática</title>
+    <link rel="stylesheet" href="{% static 'app/EstilosErrorRegistroV.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor1">
+        <div class="cuadro1">
+            <h1>Error en el registro</h1>
+            <p>El usuario o correo que ingreso ya esta siendo usados actualmente</p>
+            <p>Ingrese nuevamente los datos</p>
+            <a href="{% url 'app:registrarse_view' %}">Registrese aquí</a>
+            <br>
+            <p>O vuelva a la pagina de inicio para ingresar a Cultura Democrática</p>
+    <a href="{% url 'app:inicio_sesion_view' %}">Página de incio</a>
+        </div>
+
+        <div class="PiePagina">
+            <img src="{% static 'app/IMAGEN2.png' %}" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+    </div>
+</body>
+</html>

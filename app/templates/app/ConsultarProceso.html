@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar proceso</title>
+    <link rel="stylesheet" href="{% static 'app/Estilos_consultar_procesos.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="ConsultarProceso">
+        <div class="BarraInicio">
+            <i class="fas fa-search" id="logo1"></i>
+            <span id="titulo">Consultar un Proceso</span>
+        </div>
+        <div class="Opciones">
+            <i class="fas fa-search" id="logo2"></i>
+            <span id="text1"> ¡ Aquí podrás consultar todos los procesos!</span>
+            <br><br>
+            <div class="cuadro1">
+                <form action="{% url 'app:ConsultarProceso_post' %}" method="post">
+                    {% csrf_token %}
+                    <div class="cuadro5">
+                        <fieldset>
+                            <label for="proceso" id="text2">Seleccione un proceso</label>
+                            <select name="proceso" id="ejemplo">
+                                {% for p in procesos %}
+                                    <option value="{{ p.id }}">
+                                        {{ p.titulo }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </fieldset>
+                    </div>
+                    <button type="submit" id="boton">CONSULTAR PROCESO</button>
+                </form>
+            </div>
+            <span>Recuerda que toda la información presentada está totalmente VERIFICADA</span>
+            <br>
+            <!-- <i class="fas fa-user-check fa-10x" id="logo3"></i><br> -->
+            <a href="{% url 'app:inicio_sesion_view' %}" id="link1">Regresar a página de inicio</a><br>
+            <a href="{% url 'app:pagina_ciudadano_view' %}" id="link3">Regresar a página de inicio de ciudadano</a><br>
+            {% if request.user.is_superuser %}
+                <a href="{% url 'app:pagina_administrador_view' %}" id="link3">
+                    Regresar a página de inicio de administrador
+                </a>
+            {% endif %}
+            {% if proceso != None %}
+        <div>
+            <p id="p1">Titulo: {{ proceso.titulo }}</p>
+            <p id="p2">Fecha de Inicio: {{ proceso.fecha_inicio }}</p>
+            <p id="p3">El proceso está {% if proceso.abierto %} abierto {% else %} cerrado {% endif %}</p>
+            <p id="p4">Entidad: {{ proceso.entidad }}</p>
+            <p id="p5">Monto: {{ proceso.monto }}</p>
+            <p id="p6">Comentarios: {{ proceso.comentarios }}</p>
+            <p id="p7">Visitas: {{ proceso.visitas }}</p>
+            <h1 id="text2">Lista de Implicados:</h1>
+            <table border="1" id="tabla1">
+                <thead>
+                    <tr>
+                        <th colspan="8">Lista de implicados</th>
+                    </tr>
+                    <tr>
+                        <th>Apellidos</th>
+                        <th>Nombres</th>
+                        <th>Partido Politico</th>
+                        <th>Fecha de Acusación</th>
+                        <th>Acusacion</th>
+                        <th>Culpable/Inocente</th>
+                        <th>Pena</th>
+                        <th>Comentarios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in implicados %}
+                    <tr>
+                        <td id="td8">{{ i.afiliado.individuo.apellidos }}</td>
+                        <td id="td9">{{ i.afiliado.individuo.nombres }}</td>
+                        <td id="td10">{{ i.afiliado.partido.nombre }}</td>
+                        <td id="td11">{{ i.fecha }}</td>
+                        <td id="td12">{{ i.acusacion }}</td>
+                        <td id="td13">{% if i.culpable %} Culpable {% else %} Inocente {% endif %}</td>
+                        <td id="td14">{{ i.pena }}</td>
+                        <td id="td15">{{ i.comentarios }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        </div>
+        
+        <div class="PiePagina">
+            <img src="Imagenes/IMAGEN2.png" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor1{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 606px 80px/ auto;
+    background: #c7ba83;
+}
+
+.cuadro1{
+    font-family: 'Kaisei Decol', serif;
+    text-align: center;
+    display: grid;
+    border: solid 100px #c7ba83;
+    border-top: 95px solid #c7ba83;
+    border-right: 90px solid #c7ba83;
+    border-left: 400px solid #c7ba83;
+    border-bottom: 100px solid #c7ba83;
+    background: #979796;
+    border-radius: 20px;
+}
+
+.PiePagina{
+    height: 50.3px;
+    background:#4E4343;
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+
+#imagen2{
+    height: 50px;
+    padding-left: 1100px;
+}

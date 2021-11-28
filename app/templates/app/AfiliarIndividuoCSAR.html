@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'app/AfiliarIndividuoC.css' %}">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Afiliar Individuo - Ciudadano</title>
+</head>
+
+<body>
+    <div class="AfiliarIndividuoC">
+        <div class="Header">
+            <i class="fas fa-tree"></i>
+            <span id="titulo">Afiliar Individuo A Partido - Ciudadano</span>
+            <a href="{% url 'app:inicio_sesion_view' %}" target="_blank" id="link1">INICIO</a>
+            <a href="{% url 'app:pagina_ciudadano_view' %}" target="_blank" id="link2">PAGINA CIUDADANO</a>
+
+        </div>
+
+
+        <div class="Descripcion">
+            <i class="fas fa-tree"></i>
+            <span id="descripcion1"> ¡Bienvenido Ciudadano! Aqui puedes afiliar un ciudadano a un partido
+                politico</span>
+            <br>
+            <br>
+            <span id="descripcion2">Tú Afiliación será aprobada por un administrador proximamente</span>
+
+
+            <div class="Afiliar">
+                <p id="TituloAfiliar"> AFILIAR
+                    <br>INDIVIDUO
+                </p>
+                <form method="POST" action="{% url 'app:AfiliarIndividuoCSAR_post' %}"></form>
+                {% csrf_token %}
+                <div class="cuadro1">
+                    <p id="TituloBoton1">Seleccione el ID del
+                        <br>Individuo
+                    </p>
+                    <select name="individuo_id" id="ID">
+                        {% for i in individuos %}
+                        <option value="{{ i.id }}">{{ i.apellidos }} {{ i.nombres }}</option>
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <br>
+                </div>
+                <div class="cuadro2">
+                    <p id="TituloBoton2">Seleccione el ID del
+                        <br>Partido Politico
+                    </p>
+                    <select name="partido_id" id="Partido">
+                        {% for p in partidos %}
+                        <option value="{{ p.id }}">{{ p.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <br>
+
+                </div>
+                <div class="cuadro3">
+                    <p id="TituloBoton3">Seleccione la fecha de
+                        <br> ingreso
+                    </p>
+                    <input type="date" id="fecha1" name="fecha-ingreso" required>
+                    <br>
+                    <br>
+
+                </div>
+                <div class="cuadro4">
+                    <p id="TituloBoton4">Seleccione la fecha de
+                        <br> salida
+                    </p>
+                    <input type="date" id="fecha2" name="fecha-salida">
+                    <br>
+                    <br>
+
+                </div>
+                <div class="cuadro5">
+                    <input type="submit" id="boton1" value="Completar Afiliación">
+                    <br>
+                </div>
+
+                </form>
+
+            </div>
+
+            <div class="Footer">
+
+                <img src="ImagenesP/IMAGEN2.png" alt="IMAGEN REDES SOCIALES" id="imagen2">
+
+            </div>
+
+        </div>
+</body>
+
+</html>

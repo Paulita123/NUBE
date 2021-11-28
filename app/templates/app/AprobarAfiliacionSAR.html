@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'app/AprobarIndividuoSAR.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprobar Afiliacion</title>
+</head>
+<style>
+    body {
+        display: grid;
+        place-items: center;
+    }
+
+    fieldset {
+        border: 0;
+        outline: none;
+    }
+</style>
+<body>
+    <div class="AprobarIndividuoP" style="width: 2000px">
+        <div class="BarraInicio">
+            <i class="fas fa-tasks" id="logo1"></i>
+            <span id="titulo">Aprobar Afiliaciones</span>
+        </div>
+        <div class="Opciones">
+            <i class="fas fa-tasks" id="logo2"></i>
+            <span id="titulo2">Bienvenido administrador, aquí podrás aprobar afiliaciones </span><br>
+            <div class="cuadro1" style="margin-left: 300px;">
+                <br><br><br><br>
+                <span id="text1">APROBAR AFILIACIONES</span>
+                <div class="cuadro3">
+                    <form action="{% url 'app:AprobarAfiliacionSAR_post' %}" method="POST">
+                        {% csrf_token %}
+                        <fieldset>
+                            <label for="nombres" id="label1">Seleccione la afiliacion: </label>
+                            <select name="afiliacion" id="afiliacion">
+                                {% for a in afiliaciones %}
+                                {% if a.aprobado == False %}
+                                <option value="{{ a.id }}">{{ a.individuo.nombres }} {{ a.individuo.apellidos }} - {{ a.partido.nombre }}</option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <button type="submit" id="boton1">APROBAR AFILIACION</button>
+                        </fieldset>
+                    </form>
+                </div>
+                
+            </div>
+            <a href="{% url 'app:inicio_sesion_view' %}" target="_blank" id="link1">Regresar a página de inicio</a><br>
+                <a href="{% url 'app:pagina_administrador_view' %}" id="link2">Regresar a página de inicio de administrador</a>
+        </div>
+        
+    </div>
+</body>
+
+</html>

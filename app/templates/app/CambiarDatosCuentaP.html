@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar datos de la cuenta</title>
+    <link rel="stylesheet" href="{% static 'app/EstilosCambiarDatosCuentaP.css' %}">
+    <!-- <link rel="stylesheet" href="EstilosV/Estilos4VA.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="contenedor5">
+        <div class="cuadro5">
+            <div class="encabezado">
+                <h1 class="registro">Cambiar datos de la cuenta</h1>
+                <p>Ingrese en el campo el dato que desee cambiar</p>
+                <!-- <a href="PaginaAdminVA.html">Regresar a la pagina de incio</a> -->
+                <br>
+            </div>
+            <form action="{% url 'app:CambiarDatosCuentaPOSTP' request.user.id %}" method="post">
+            {% csrf_token %}
+            
+                <div class="datos1" style="margin-left: 170px;">
+                    <input type="text" id="nombre" placeholder="Nombres" name="nombres" value="{{ request.user.first_name }}">
+                    <input type="text" id="apellidos" placeholder="Apellidos" name="apellidos" value="{{ request.user.last_name }}">
+                </div>
+
+                <br>
+
+                <div class="datos2" style="margin-left: 170px;">
+                    <input type="text" id="usuario" placeholder="Ingrese su nuevo usuario" name="username" value="{{ request.user.username }}">
+                    <input type="password" id="contraseña" placeholder="Ingrese su contraseña aquí" name="password">
+                </div>
+
+                <br>
+
+                <div class="datos3" style="margin-left: 170px;height: 30px;width:270px;">
+                    <input type="email" id="email" placeholder="Ingrese su e-mail aquí" name="email" value="{{ request.user.email }}">
+                </div>
+
+                <br>
+
+                <div class="boton1" style="margin-left: 62px;">
+                    <button type="submit">Cambiar</button>
+                </div>
+            </form>
+        </div>
+        <div class="PiePagina">
+            <img src="{% static 'app/IMAGEN2.png' %}" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+    </div>
+    
+</body>
+</html>

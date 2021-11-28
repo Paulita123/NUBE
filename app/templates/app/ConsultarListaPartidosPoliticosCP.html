@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar lista de partidos políticos</title>
+    <link rel="stylesheet" href="{% static 'app/EstilosConsultarListaPartidosPoliticosP.css' %}">
+    <!-- <link rel="stylesheet" href="Estilosp/estilosCListaPP.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="ConListaPP">
+        <div class="BarraInicial">
+            <i class="fas fa-search" id="logo1"></i>
+            <span id="titulo">Consultar lista de partidos políticos</span>
+        </div>
+        <div class="Opciones">
+            <i class="fas fa-search" id="logo2"></i>
+            <span id="text1">¡ Ahora podrás ver toda la lista de partidos políticos ! "El conocimiento es poder"</span>
+            <br>
+            <br>
+            <!-- {% for p in ConsultarListaPartidosPoliticosCP %}
+            <li>{{p.nombre}}</li>
+            {% endfor %} -->
+            
+            <table border="1" id="tabla1"> 
+            <thead>
+                    <th>Nombre del partido político</th>
+                    <th>Cantidad de visitas</th>
+                    <th>Cantidad total de procesos</th>
+                </thead>
+                <tbody>
+                    {% for p in ConsultarListaPartidosPoliticosCP %}
+                    <tr>
+                        <td id="td1">{{ p.0.nombre }}</td>
+                        <td id="td2">{{ p.0.visitas }} views</td>
+                        <td id="td3">{{ p.1 }}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                    <!-- <tr>
+                        <td id="td4">Partido Colombia Renaciente</td>
+                        <td id="td5">11000 views</td>
+                        <td id="td6">200</td>
+                        
+                    </tr>
+                    <tr>
+                        <td id="td7">Partido Alianza Social Independiente ASI</td>
+                        <td id="td8">20 views</td>
+                        <td id="td9">100</td>
+                        
+                    </tr>
+                    <tr>
+                        <td id="td10">Partido Alianza Verde</td>
+                        <td id="td11">23000 views</td>
+                        <td id="td12">90</td>
+                        
+                    </tr>
+                    <tr>
+                        <td id="td13">Partido Cambio Radical</td>
+                        <td id="td14">30000 views</td>
+                        <td id="td15">80</td>
+                        
+                    </tr>
+                    <tr>
+                        <td id="td16">Partido Centro Democrático</td>
+                        <td id="td17">3000 views</td>
+                        <td id="td18">70</td>
+                        
+                    </tr> -->
+                </tbody>
+            </table>
+            <span id="text2">Recuerda que toda la información presentada está totalmente VERIFICADA</span>
+            <br>
+            <i class="fas fa-user-check fa-10x" id="logo3"></i>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="{% url 'app:inicio_sesion_view' %}" id="link1">Regresar a página de inicio</a>
+            <a href="{% url 'app:pagina_ciudadano_view' %}" id="link3">Regresar a página de inicio de ciudadano</a>
+            <!-- <a href="{% url 'app:pagina_administrador_view' %}" id="link3">Regresar a página de inicio de administrador</a> -->
+            <!-- <a href="InicioVA.html" target="_blank" id="link1">Regresar a página de inicio</a> -->
+            <!-- <a href="PaginaCiuVA.html" target="_blank" id="link3">Regresar a página de inicio de ciudadano</a> -->
+        </div>
+        <div class="PiePagina">
+            <img src="{% static 'app/IMAGEN2.png' %}" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>

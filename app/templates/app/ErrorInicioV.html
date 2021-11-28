@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Democrática</title>
+    <link rel="stylesheet" href="{% static 'app/EstilosVA.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="contenedor2">
+        <div class="cuadro2">
+            <br>
+            <h1>Ingreso Fallido</h1>
+            <p>Sus datos son incorrectos verifique su usuario y su contraseña, por favor intente nuevamente</p>
+            <a href="{% url 'app:inicio_sesion_view' %}">Regresar a la pagina de incio</a>
+            <p>O también puedes registrarTe en el siguiente link</p>
+            <a href="{% url 'app:registrarse_view' %}">Registrarse en la página</a>
+        </div>
+
+        <div class="PiePagina">
+            <img src="ImagenesP/IMAGEN2.png" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+
+    </div>
+    
+</body>
+</html>

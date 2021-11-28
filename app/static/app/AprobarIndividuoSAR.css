@@ -1,0 +1,203 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.BarraInicio{
+    background: #4E4343;
+    border: solid 0.2px #111111;
+    padding-top: 21px;
+    padding-bottom: 28px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+}
+#titulo{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 1.5rem;
+    color: #fff8dc;
+    padding-left: 5px;
+}
+#logo1{
+    background: #4E4343;
+    color: cornsilk;
+    padding: 0.3px;
+    border-left: 6px solid #4E4343;
+    border-top: 1.5px solid #4E4343;
+    width: 22px;
+    height: 22px;
+}
+.Opciones{
+    border: solid 0.2px #111111;
+    padding-top: 21px;
+    padding-bottom: 360px;
+    background:#c7ba83;
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+.PiePagina{
+    border: solid 0.2px #c7ba83;
+    border-top: 35px;
+    padding-top: 21px;
+    padding-bottom: 38.5px;
+    background:#4E4343;
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+#titulo2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 1.5rem;
+    color: #000000;
+    padding-left: 5px;
+}
+#logo2{
+    background: #c7ba83;
+    color: #0a0a0a;
+    padding: 0.3px;
+    border-left: 6px solid #c7ba83;
+    border-top: 1.5px solid #c7ba83;
+    width: 22px;
+    height: 22px;
+}
+#imagen2{
+    width: 200px;
+    margin-left: 1135px;
+}
+.cuadro1{
+    background:#4E4343;
+    grid-row: 2/ 3;
+    grid-column: 1/ 2;
+    width: 718.94px;
+    height: 340px;
+    margin-left: 66px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+#text1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    color: #fff8dc;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    margin-left: 240px;
+}
+.cuadro2{
+    background:#C4C4C4;
+    grid-row: 2/ 3;
+    grid-column: 1/ 2;
+    width: 400px;
+    height: 500px;
+    margin-left: 800px;
+    margin-top: -172px;
+}
+#text2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    color: #000000;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    margin-left: 170px;
+}
+#text3{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    color: #000000;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    margin-left: 141px;
+}
+#selección{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    color: #fff8dc;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    margin-left: 141px;
+}
+.cuadro3{
+    background:#979796;
+    grid-row: 2/ 3;
+    grid-column: 1/ 2;
+    width: 578.94px;
+    height: 63px;
+    margin-left: 66px;
+    margin-top: 50px;
+    padding-top: 15px;
+}
+#label1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    margin-top: 210px;
+    margin-left: 40px;
+}
+#individuo{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    width: 300px;
+    height: 31px;
+    margin-left: 30px;
+}
+#boton1{
+    background: #4b82c2;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 60px;
+    margin-left: 220px;
+}
+#boton1:hover{
+    background: brown;
+}
+.cuadro4{
+    background:#8C7979;
+    grid-row: 2/ 3;
+    grid-column: 1/ 2;
+    width: 300px;
+    height: 300px;
+    margin-left: 52px;
+    margin-top: 20px;
+    padding-top: 30px;
+}
+#boton2{
+    background: #4b82c2;
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 40px;
+    margin-left: 130px;
+}
+#boton2:hover{
+    background: brown;
+}
+#text4{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    color: #000000;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 300px;
+    height: 58px;
+}
+#link1{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 550px;
+   
+    
+}
+#link1:hover{
+    color: brown;
+}
+#link2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 20px;
+    padding-left: 465px;
+   
+    
+}
+#link2:hover{
+    color: brown;
+}

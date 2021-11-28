@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear individuo</title>
+    <link rel="stylesheet" href="{% static 'app/CrearIndividuoCSAR.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        fieldset {
+            border: 0;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="CrearIndividuoCP" style="width: 2000px;">
+        <div class="BarraInicio">
+            <i class="fas fa-plus-circle" id="logo1"></i>
+            <span id="titulo">Crear individuo</span>
+        </div>
+        <div class="Opciones">
+            <i class="fas fa-plus-circle" id="logo2"></i>
+            <span id="text1">Bienvenido ciudadano, aquí podrás crear a un individuo y esperar que sea aprobado, suerte !
+            </span><br>
+            <div class="cuadro1">
+                <br><br><br>
+                <span id="text2">CREAR</span>
+                <br><span id="text3">INDIVIDUO</span>
+                <br>
+                <form action="{% url 'app:CrearIndividuoCSAR_post' %}" method="post">
+                    {% csrf_token %}
+                    <div class="cuadro2">
+                        
+                        <fieldset>
+                            <label>Ingrese el nombre</label>
+                            <input type="text" name="nombre" placeholder="Nombre individuo">
+                        </fieldset>
+                    </div>
+                    <div class="cuadro3">
+                        <fieldset>
+                            <label>Ingrese los apellidos</label>
+                            <input type="text" name="apellidos" placeholder="Apellidos individuo">
+                        </fieldset>
+                    </div>
+                    <div class="cuadro4">
+                        <fieldset>
+                            <label>Ingrese fecha de nacimiento del individuo</label>
+                            <input type="date" name="fechaN" placeholder="Fecha nacimiento">
+                        </fieldset>
+                    </div>
+                    <br>
+                   
+                        <button type="submit" id="boton1">CREAR INDIVIDUO</button>
+                        <!-- <p>Nombre de creador:</p>
+                        <br>
+                        <input type="text" id="nombre" placeholder="Ingrese el creador aquí"> -->
+                  
+                </form>
+
+            </div>
+            <a href="{% url 'app:inicio_sesion_view' %}" id="link1">Regresar a página de inicio</a>
+        </div>
+        <div class="PiePagina">
+            <img src="ImagenesP/IMAGEN2.png" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+    </div>
+
+
+</body>
+
+</html>

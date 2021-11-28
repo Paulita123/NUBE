@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprobar individuo</title>
+    <link rel="stylesheet" href="{% static 'app/AprobarIndividuoSAR.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        display: grid;
+        place-items: center;
+    }
+
+    fieldset {
+        border: 0;
+        outline: none;
+    }
+</style>
+<body>
+    <div class="AprobarIndividuoP" style="width: 2000px">
+        <div class="BarraInicio">
+            <i class="fas fa-tasks" id="logo1"></i>
+            <span id="titulo">Habilitar/Deshabilitar Ciudadano</span>
+        </div>
+        <div class="Opciones">
+            <i class="fas fa-tasks" id="logo2"></i>
+            <span id="titulo2">Bienvenido administrador, aquí podrás Habilitar Ciudadanos</span><br>
+            <div class="cuadro1" style="margin-left: 300px;">
+                <br><br><br><br>
+                <span id="text1">Habilitar/Deshabilitar Ciudadano</span>
+
+                <div class="cuadro3">
+                    <form action="{% url 'app:HabDesSAR_post' %}" method="POST">
+                        {% csrf_token %}
+                        <fieldset>
+                            <label for="Nombres" id="label1">Seleccione el ID</label>
+                            <select name="individuo" id="individuo">
+                               {% for u in User %}
+                               {% if u.is_superuser == False %}
+                               <option value="{{u.id}}">{{u.id}}_{{u.username}}</option>
+                               {% endif %}
+                               {% endfor %}
+                            </select>
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <label for="HABDES" id="label2">Acción A Realizar</label>
+                            <select name="opcion" id="Ciudadano">
+                                    <option value="habilitar">Habilitar</option>
+                                    <option value="deshabilitar">Deshabilitar</option>
+                            </select>
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <button type="submit" id="boton1">Finalizar Acción</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <br>
+
+
+            <a href="InicioVA.html" target="_blank" id="link1">Regresar a página de inicio</a>
+
+        </div>
+        <div class="PiePagina">
+            <img src="{% static 'app/IMAGEN2.png' %}" alt="IMAGEN REDES SOCIALES" id="imagen2">
+        </div>
+    </div>
+
+</body>
+
+</html>
